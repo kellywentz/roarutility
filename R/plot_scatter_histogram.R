@@ -169,8 +169,6 @@ plot_scatter_histogram <- function(df,
     ) +
     ggplot2::theme(
       text = ggplot2::element_text(size = 14),
-      axis.title = ggplot2::element_text(face = "bold"),
-      legend.title = ggplot2::element_text(face = "bold"),
       legend.position = "bottom",
       aspect.ratio = 1
     )
