@@ -87,8 +87,8 @@ estimate_grade <- function(age_months_at_run, verbose = TRUE) {
     message("Note: Age is less than 3 years old (", age_months_at_run, " months). Assigning 'Pre-K'.")
   }
 
-  # Warn about college-age or older
-  if (age_months_at_run >= 216 && age_months_at_run <= 1440 && verbose) {
+  # Warn about college-age or older (19+)
+  if (age_months_at_run >= 228 && age_months_at_run <= 1440 && verbose) {
     message("Note: Age is ", floor(age_months_at_run / 12), " years (", age_months_at_run,
             " months), which is beyond typical K-12 age range. Assigning grade '12'.")
   }
@@ -98,10 +98,10 @@ estimate_grade <- function(age_months_at_run, verbose = TRUE) {
     return("Pre-K")
   } else if (age_months_at_run >= 60 && age_months_at_run < 72) {  # 5 years old to (but not including) 6 years old
     return("Kindergarten")
-  } else if (age_months_at_run >= 72 && age_months_at_run < 216) {  # From 6 years old to (but not including) 18 years old
+  } else if (age_months_at_run >= 72 && age_months_at_run < 228) {  # From 6 years old to (but not including) 19 years old
     grade <- as.character(floor(age_months_at_run / 12) - 5)  # Grade 1 through 12
     return(grade)
   } else {
-    return("12")  # 18 years and older
+    return("12")  # 19 years and older
   }
 }
