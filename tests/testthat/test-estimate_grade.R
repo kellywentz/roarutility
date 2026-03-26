@@ -2,9 +2,9 @@ library(purrr)
 library(dplyr)
 
 test_df <- data.frame(
-  age_months = c(75, 83, 99, 200),
-  user_grade = c(NA, "2", "2", "10"),
-  time_started = c("2025-03-12", "2024-02-17", "2026-01-09", "2025-04-19")
+  age_months = c(75, 83, 99, 200, 224),
+  user_grade = c(NA, "2", "2", "10", "12"),
+  time_started = c("2025-03-12", "2024-02-17", "2026-01-09", "2025-04-19", "2025-01-12")
 )
 
 clean_df <- test_df %>% mutate(user_grade = case_when(
